@@ -18,8 +18,14 @@ const ContentBox = styled.div`
   &.header, &.footer {
     height: 240px;
   }
+  &.about {
+    padding: 10px 15px;
+  }
+  &.half-vertical {
+    max-height: calc(50% - 10px);
+  }
   &.footer {
-  margin-bottom: 0;
+    margin-bottom: 0;
   }
 `;
 
