@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import propTypes from 'prop-types';
 import {NavElements} from '../mocks/navigation';
 import styled from 'styled-components';
 
@@ -29,23 +30,32 @@ const NavigationElements = styled.ul`
       text-decoration: none;
       text-transform: uppercase;
       transform: translate(-50%,-50%);
-       &:hover {
-       color: #FF0000;
-       text-decoration: underline;
-       }
-     }
+      &.active{
+        color: #FF0000;
+        font-weight: 700;
+        &:hover {
+        text-decoration: none;
+        }
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 `;
 
-const Links = (element) => <li>
-    <NavLink
-        exact
-        to={element.slug}
-        activeClassName="active"
+const Links = (element) =>
+    <li
+        key={element.name}
     >
-        {element.name}
-    </NavLink>
-</li>;
+        <NavLink
+            exact
+            to={element.slug}
+            activeClassName="active"
+        >
+            {element.name}
+        </NavLink>
+    </li>;
 
 const Navigation = () =>
     <nav>
@@ -53,5 +63,12 @@ const Navigation = () =>
             {NavElements.map(Links)}
         </NavigationElements>
     </nav>;
+
+Links.propTypes = {
+    element: propTypes.shape({
+        name: propTypes.string.isRequired,
+        slug: propTypes.number.isRequired
+    }).isRequired
+};
 
 export default Navigation;

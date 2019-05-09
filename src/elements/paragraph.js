@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Text = styled.p`
@@ -10,5 +11,9 @@ const Text = styled.p`
 
 const Paragraph = ({text}) =>
     <Text>{text}</Text>
+
+Paragraph.propTypes = {
+    text: propTypes.string.isRequired
+};
 
 export default Paragraph
