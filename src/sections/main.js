@@ -40,10 +40,11 @@ class Main extends Component {
     }
 
     render() {
+        const {aboutText} = this.state;
         return (
             <SplitBox>
                 <div className='half-horizontal'>
-                    <Box classes='about' text={this.state.aboutText}/>
+                    <Box classes='about' text={aboutText}/>
                 </div>
                 <div className='half-horizontal'>
                     <Box classes='half-vertical' text='quick links'/>

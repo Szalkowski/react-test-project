@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import propTypes from 'prop-types';
-import {NavElements} from '../mocks/navigation';
+import {NavElements} from '../config/navigation-template';
 import styled from 'styled-components';
 
 const NavigationElements = styled.ul`
