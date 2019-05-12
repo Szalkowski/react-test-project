@@ -35,11 +35,11 @@ const Box = ({text, classes}) =>
     </ContentBox>
 
 Box.propTypes = {
+    text: propTypes.string.isRequired,
     classes: propTypes.string,
-    text: propTypes.string.isRequired
 };
 
 propTypes.default = {
     classes: ''
-}
+};
 export default Box
