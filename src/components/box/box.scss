@@ -1,0 +1,30 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 100%;
+  background-color: #E0E0E0;
+
+  &__top-bar {
+    height: 150px;
+  }
+
+  &__header, &__footer {
+    height: 240px;
+  }
+
+  &__about {
+    padding: 10px 15px;
+  }
+
+  &__footer {
+    margin-bottom: 0;
+  }
+
+  &__half {
+    &--vertical {
+      max-height: calc(50% - 10px);
+    }
+  }
+}

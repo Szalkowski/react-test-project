@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Main from "../sections/main";
-import Loader from "../components/loader";
-import Layout from "../config/layout";
+import Main from '../../sections/main/main';
+import Loader from '../../components/loader/loader';
+import Layout from '../../config/layout/page-layout/layout';
 
 class HomePage extends Component {
     constructor(props) {
@@ -43,12 +43,11 @@ class HomePage extends Component {
         return (
             <div>
                 {
-                    loader ?
-                        <Loader/>
-                        :
-                        <Layout>
+                    loader
+                        ? <Loader/>
+                        : <Layout>
                             <Main aboutText={aboutText}/>
-                        </Layout>
+                          </Layout>
                 }
             </div>
         )
