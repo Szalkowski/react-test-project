@@ -1,8 +1,19 @@
-It's a create-react-app based test project 
+#Practice layout
+##The layout was created for the recruitment to the Front End Developer position based on the React framework
 
-If you are a developer and want use this project for your personal uses just: 
-1. Download repository
-2. type in terminal `npm install` in project folder
-3. run project through `npm start` command in terminal in project folder
+####Plugins and tools:
+* create-react-app 
+* react-router-dom  
+* node-sass
+* propTypes
 
-If you want to publish project type `npm run build` in terminal in project folder then copy and paste content of `build` folder on your server
+####Setup
+1. `git clone git@github.com:Szalkowski/react-test-project.git` or if you don't have ssh key `git clone https://github.com/Szalkowski/react-test-project.git` 
+2. `cd react-test-project` or different folder if you created
+3. `npm install`
+4. `npm start`
+
+####Deploy
+1. `cd react-test-project` or any folder you have the project files
+2. `npm run build`
+3. copy content of `build` folder in root folder to your server to folder where you keep website files
