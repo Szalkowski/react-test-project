@@ -16,4 +16,4 @@
 #### Deploy
 1. `cd react-test-project` or any folder you have the project files
 2. `npm run build`
-3. copy content of `build` folder in root folder to your server to folder where you keep website files
+3. copy content of `build` folder that was created in root to your server folder where you keep website files
