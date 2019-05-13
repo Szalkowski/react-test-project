@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
+import {LoaderContext} from '../../components/loader/loading-context';
 import Main from '../../sections/main/main';
-import Loader from '../../components/loader/loader';
 import Layout from '../../config/layout/page-layout/layout';
 
 class HomePage extends Component {
@@ -39,17 +39,14 @@ class HomePage extends Component {
     }
 
     render() {
-        const {loader, aboutText} = this.state;
+        const {aboutText} = this.state;
+        const {Provider} = LoaderContext;
         return (
-            <div>
-                {
-                    loader
-                        ? <Loader/>
-                        : <Layout>
-                            <Main aboutText={aboutText}/>
-                          </Layout>
-                }
-            </div>
+            <Provider value={this.state.loader}>
+                <Layout>
+                    <Main aboutText={aboutText}/>
+                </Layout>
+            </Provider>
         )
     }
 }
